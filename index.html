@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Book Library</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body onload="homeload()">
+  <header>
+  <h1>Library App</h1>
+  </header>
+  <div class="major">
+   <nav>
+      <ul>
+        <li><button type="button" onclick="home()">HOME</button></li>
+        <li><button type="button" onclick="booksfunction()">BOOKS</button></li>
+        <li><button type="button" onclick="users()">ADD USERS</button></li>
+        <li><button type="button" onclick="records()">USERS RECORDS</button></li>
+        <li><button type="button" onclick="issue()">ISSUE BOOKS</button></li>
+      </ul>
+    </nav>
+    <div id="home">
+      
+    </div>
+  <main>
+    <div id="books">
+    <h1>The Library</h1>
+    <label for="authorSearch">Search for Author by Name</label>
+    <input id="authorSearch" >
+    <button type="button" onclick="authSearch()">Search</button>
+    <p id='result'></p>
+
+    <h2>Add a Book to the Library</h2>
+    <label for="addAuthor">Enter Author Name</label>
+    <input id="addAuthor">
+    <label for="addBook">Enter Title of Book</Label>
+    <input id="addBook">
+    <label for="addGenre">Enter Title of Genre</Label>
+    <input id="addGenre">
+    <label for="addCopies">Enter Title of Copies</Label>
+    <input id="addCopies"><br>
+    <button type="button" onclick="addBook()">Add</button>
+
+    <h2>Books Currently in the Library</h2>
+    <button type="button" onclick="showAllBooks()" id="BooksAdd">Show All Books</button>
+    <ol id="allTheBooks">
+
+    </ol>
+  </div>
+  <div id="users">
+    <h1>The Library</h1>
+    <h2>Add New User ( Issue Library Card )</h2>
+    <label for="addUser">Enter User Name</label>
+    <input id="addUser" type="text">
+    <label for="addEmail">Enter Email ID</Label>
+    <input id="addEmail" type="email">
+    <label for="addCard">Enter Library Card No.</Label>
+    <input id="addCard" type="text"><br>
+    <button type="button" onclick="addUser()">Add</button>
+
+  </div>
+  <div id="users-records">
+    <h1>User Records</h1>
+    <label for="recordSearch">Search for User Records by Library Card No.</label>
+    <input id="recordSearch" >
+    <button type="button" onclick="recordSearch()">Search</button>
+    <p id='result-user'></p>
+    <h2>Users Currently having Library Card</h2>
+    <button type="button" onclick="showAllUsers()" id="UsersAdd">Show All Users</button>
+    <ol id="allTheUsers">
+
+    </ol>
+    </div>
+  <div id="issuebooks">
+    <h1>ISSUE BOOKS</h1>
+    <label for="author">Enter Author Name</label>
+    <input id="author">
+    <label for="book-issue">Enter Title of Book</Label>
+    <input id="book-issue">
+    <label for="libcard">Enter Library Card No.</Label>
+    <input id="libcard"><br>
+    <button type="button" onclick="newBook()">Issue</button>
+  </div>
+  </main>
+  <footer>
+    <p>wmdd 4820 2016</p>
+  </footer>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
